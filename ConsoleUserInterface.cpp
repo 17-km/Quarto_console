@@ -35,7 +35,7 @@ char ConsoleUserInterface::selectFromMainMenu()
 {
     char choice;
 
-    system("cls");
+    if (system("cls")) system("clear");
     cout << " >>> QUARTO GAME <<<" << endl;
     cout << "---------------------------" << endl;
     cout << "1. Play EASY version" << endl;
@@ -169,7 +169,7 @@ void ConsoleUserInterface::updateBoard()
 void ConsoleUserInterface::displayTheBoard()
 {
     updateBoard();
-    system("cls");
+    if (system("cls")) system("clear");
     cout << "              >>> QUARTO GAME <<<           " << endl << endl;
     cout << internal << "   |    1    |    2    |    3    |    4    |" << endl;
     cout << "--------------------------------------------" << endl;
