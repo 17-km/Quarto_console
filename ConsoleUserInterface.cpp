@@ -82,7 +82,10 @@ void ConsoleUserInterface::startGame(bool gameDifficultyLevel)
     delete game;
     game = NULL;
 
-    system("pause");
+    cout << "Press enter to go back to main menu..." << endl;
+
+    string choice = "";
+    getline(cin, choice);
 
     displayMainMenu();
 }
@@ -384,7 +387,10 @@ void ConsoleUserInterface::displayMainMenu()
             break;
         default:
             cout << endl << "There is no such option in the menu." << endl << endl;
-            system("pause");
+            cout << "Press enter to go back to try again..." << endl;
+
+            string choice = "";
+            getline(cin, choice);
             break;
         }
     }
